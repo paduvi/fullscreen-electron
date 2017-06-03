@@ -16,9 +16,9 @@ Demo Fullscreen app with Electron
 `cd fullscreen-electron && npm install`
 
 3. Package application:
-- Window: `npm run package-win`
-- MacOSX: `npm run package-mac`
-- Linux: `npm run package-linux`
+- Window: `npm run build && npm run package-win`
+- MacOSX: `npm run build && npm run package-mac`
+- Linux: `npm run build && npm run package-linux`
 
 After building process, packaged app will be appeared in `dist` folder.
 
