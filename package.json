@@ -27,7 +27,6 @@
     "package-mac": "electron-packager . --platform=darwin --overwrite --prune=true --out=dist --ignore=\"(node_modules|.git|dist)\" --icon=./public/icon/mac/logo.icns",
     "package-win": "electron-packager . --platform=win32 --overwrite --asar=true --prune=true --out=dist --ignore=\"(node_modules|.git|dist)\" --icon=./public/icon/win/logo.ico",
     "package-linux": "electron-packager . --platform=linux --overwrite --prune=true --out=dist --ignore=\"(node_modules|.git|dist)\" --icon=./public/icon/png/logo.png",
-    "package-arm": "electron-packager . --platform=linux --arch=armv7l --overwrite --prune=true --out=dist --ignore=\"(node_modules|.git|dist)\" --icon=./public/icon/png/logo.png"
   },
   "dependencies": {
     "electron-sudo": "^4.0.12"
