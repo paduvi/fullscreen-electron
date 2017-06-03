@@ -1,6 +1,7 @@
 /**
  * Created by chotoxautinh on 6/1/17.
  */
+process.env.PIN = process.env.PIN || 123456;
 const electron = require('electron')
 // Module to control application life.
 const app = electron.app
