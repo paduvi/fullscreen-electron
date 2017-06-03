@@ -17,16 +17,16 @@
     "react-spinjs": "^3.0.0"
   },
   "scripts": {
-    "start": "nf start -p 3000 -w",
+    "start": "nf start -p 3000",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "electron": "electron . --enable-logging",
+    "electron": "electron .",
     "electron-start": "node src/electron-wait-react",
     "react-start": "react-scripts start",
     "package-mac": "electron-packager . --platform=darwin --overwrite --prune=true --out=dist --ignore=\"(node_modules|.git|dist)\" --icon=./public/icon/mac/logo.icns",
     "package-win": "electron-packager . --platform=win32 --overwrite --asar=true --prune=true --out=dist --ignore=\"(node_modules|.git|dist)\" --icon=./public/icon/win/logo.ico",
-    "package-linux": "electron-packager . --platform=linux --overwrite --prune=true --out=dist --ignore=\"(node_modules|.git|dist)\" --icon=./public/icon/png/logo.png",
+    "package-linux": "electron-packager . --platform=linux --overwrite --prune=true --out=dist --ignore=\"(node_modules|.git|dist)\" --icon=./public/icon/png/logo.png"
   },
   "dependencies": {
     "electron-sudo": "^4.0.12"

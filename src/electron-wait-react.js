@@ -15,8 +15,20 @@ const tryConnection = () => client.connect({port: port}, () => {
             console.log('starting electron');
             startedElectron = true;
 
-            const exec = require('child_process').exec;
-            exec('npm run electron');
+            const spawn = require('child_process').spawn;
+            const temp = spawn('npm', ['run', 'electron']);
+            temp.stdout.on('data', function(data) {
+                console.log(data.toString());
+                //Here is where the output goes
+            });
+            temp.stderr.on('data', function(data) {
+                console.error(data.toString());
+                //Here is where the error output goes
+            });
+            temp.on('close', function(code) {
+                console.log('closing code: ' + code);
+                //Here you can get the exit code of the script
+            });
         }
     }
 );
