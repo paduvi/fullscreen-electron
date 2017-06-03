@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+}
+
+.App-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+}
+
+.App-intro {
+    font-size: large;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.enjoy-css {
+    box-sizing: content-box;
+    width: 250px;
+    height: 70px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    bottom: 30%;
+    transform: translate(-50%, 50%);
+    color: rgb(30, 205, 151);
+    text-align: center;
+    text-indent: 0px;
+    text-overflow: clip;
+    letter-spacing: 1px;
+    white-space: normal;
+    word-spacing: 0px;
+    outline: none;
+    border: 2px solid rgb(30, 205, 151);
+    border-image: initial;
+    border-radius: 40px;
+    font: 37px/70px 'Advent Pro', sans-serif;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+}
+
+.enjoy-css:hover {
+    color: rgb(255, 255, 255);
+    background: rgb(30, 205, 151);
+}
+
+.enjoy-css:active {
+    border: 2px solid rgb(33, 224, 163);
+    border-image: initial;
+    background: rgb(33, 224, 163);
+    transition: none;
+}
+
+.prompt fieldset {
+    border: none;
+    position: relative;
+}
+
+.prompt input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1px solid #d7d7d7;
+    height: 43px;
+    margin-top: 10px;
+    margin-bottom: 17px;
+    font-size: 18px;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.06);
+    padding: 0 12px;
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.prompt .sa-input-error {
+    position: absolute;
+    top: 29px;
+    right: 26px;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+}
+
+.prompt .sa-input-error::before {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.prompt .sa-input-error::after {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.prompt .sa-input-error::before, .prompt .sa-input-error::after {
+    content: "";
+    width: 20px;
+    height: 6px;
+    background-color: #f06e57;
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+    left: 50%;
+    margin-left: -9px;
+}
+
+.prompt .sa-error-container {
+    background-color: #f1f1f1;
+    margin-left: -17px;
+    margin-right: -17px;
+    overflow: hidden;
+    padding: 10px 0;
+    max-height: 100px;
+    text-align: center;
+}
+
+.prompt .sa-error-container .icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #ea7d7d;
+    color: white;
+    line-height: 24px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.prompt button {
+    background-color: #8CD4F5;
+    color: white;
+    border: none;
+    box-shadow: none;
+    font-size: 17px;
+    font-weight: 500;
+    -webkit-border-radius: 4px;
+    border-radius: 5px;
+    padding: 10px 32px;
+    margin: 26px 5px 0 5px;
+    cursor: pointer;
+}
+
+.prompt button.cancel {
+    background-color: #C1C1C1;
+}
+
+.prompt .sa-confirm-button-container {
+    display: inline-block;
+    position: relative;
+}
