@@ -10,6 +10,7 @@ const {BrowserWindow} = electron
 const {ipcMain} = require('electron')
 const path = require('path')
 const url = require('url')
+const Sudoer = require('electron-sudo').default;
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -91,8 +92,18 @@ ipcMain.on('pin-code', (event, pinCode, left) => {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on('ready', () => {
-    createLoadingScreen();
-    createWindow();
+    let options = {name: 'fullscreen demo application'}
+    var sudoer = new Sudoer(options);
+    sudoer.spawn('echo', ['$PARAM'], {env: {PARAM: 'VALUE'}}).then(function (cp) {
+
+        /*
+         cp.output.stdout (Buffer)
+         cp.output.stderr (Buffer)
+         */
+        createLoadingScreen();
+        createWindow();
+    });
+
 })
 
 // Quit when all windows are closed.
